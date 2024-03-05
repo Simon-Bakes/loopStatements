@@ -7,7 +7,6 @@ function primeNum(){
             for (let j=2; j<i; j++){
                 if(i%j==0){
                     isPrime = false;
-                    break;
                 }
             }
             if(isPrime){
@@ -15,4 +14,14 @@ function primeNum(){
             }
         }
         document.getElementById("output1").innerHTML = "Primes numbers are: "+counterPrime;
+}
+
+function evenNum(){
+    let empty = "";
+    let i = -2;
+    do {
+        i+=2;
+        empty += i + " "; 
+    }while(i<=98);
+    document.getElementById("output2").innerHTML = empty;
 }
