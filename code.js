@@ -45,15 +45,32 @@ function fibonacciSeq(){
 
 // ex.4 pyramid of numbers
 function numPyramid(){
+//     let maxRange = document.getElementById("input4").value;
+//     let finalOutput="";
+//     let startNum=1;
+//     for(let i=1;i<=maxRange;i++){
+//         finalOutput += " <br/>";
+//         for(let j=1;j<=i;j++){
+//             finalOutput += startNum+" ";
+//             startNum+=1;
+//         }
+//     }
+//     document.getElementById("output4").innerHTML = finalOutput;
+// }
     let maxRange = document.getElementById("input4").value;
     let finalOutput="";
-    let startNum=1;
-    for(let i=1;i<=maxRange;i++){
-        finalOutput += " <br/>";
-        for(let j=1;j<=i;j++){
-            finalOutput += startNum+" ";
-            startNum+=1;
+    let numCount=1;
+    let rowsCount=-1;
+    while(numCount<=maxRange){
+           rowsCount+=1;
+        for(let i=0;i<=rowsCount;i++){
+            if(numCount > maxRange){
+                break;
+            }
+            finalOutput += numCount+" ";
+            numCount+=1;
         }
+        finalOutput += " <br/>";
     }
     document.getElementById("output4").innerHTML = finalOutput;
 }
