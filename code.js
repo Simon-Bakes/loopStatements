@@ -86,7 +86,6 @@ function powerof3(){
     document.getElementById("output5").innerHTML = finalOutput;
 }
 
-
 // ex.6 fractions formula?
 function sumOf(){
     let placeholder;
@@ -99,3 +98,24 @@ function sumOf(){
     }
     document.getElementById("output6").innerHTML = finalOutput;
 }
+
+// ex.7 diamond generator
+function diamond(){
+    let radius = document.getElementById("input7").value;
+    let storage = "";
+    let storage2 = "<br/>";
+
+        for(let i = 1; i <= radius; i++){
+                storage += "<br/>"; 
+            for(let j = 1; j <= i; j++){
+                storage += "*";
+            } 
+            for(let k = radius; k > i; k--){
+                storage2 += "*";
+            }
+            storage2 += "<br/>";
+            document.getElementById("output7").innerHTML = storage+storage2;
+        }
+}
+
+// ex.8
